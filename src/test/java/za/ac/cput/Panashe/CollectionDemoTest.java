@@ -4,7 +4,6 @@ package za.ac.cput.Panashe;
 //Java Collection classes
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.Collection;
@@ -12,21 +11,36 @@ import java.util.LinkedList;
 
 class CollectionDemoTest {
     @Test
-    public void CollectionAddTest() {
+    public void CollectionAdd() {
         Collection<String> collection = new LinkedList<>();
         Assertions.assertEquals(0, collection.size());
-        collection.add("Panashe");
-        Assertions.assertEquals(1, collection.size());
+        collection.add("RNB");
+        collection.add("Hip-Hop");
+        Assertions.assertEquals(2, collection.size());
+        System.out.println("Total Genre's added: " +collection.size());
     }
 
     @Test
-    public void CollectionRemoveTest() {
+    public void CollectionRemove() {
         Collection<String> collection = new LinkedList<>();
-        collection.add("Panashe");
-        collection.add("Sharon");
+        collection.add("Gospel");
+        collection.add("Hip-Hop");
         Assertions.assertEquals(2, collection.size());
-        collection.remove("Panashe");
+        collection.remove("Gospel");
         Assertions.assertEquals(1, collection.size());
+        System.out.println("Total Genre's removed: " +collection.size());
+    }
+
+    @Test
+    void CollectionFind(){
+        Collection<String> collection = new LinkedList<>();
+        collection.add("Hip-Hop");
+        collection.add("Gospel");
+        if(collection.contains("Gospel")){
+            System.out.println("Contains Gospel");
+        }
+        assertEquals(2, collection.size());
     }
 }
+
 
