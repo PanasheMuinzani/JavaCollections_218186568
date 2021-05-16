@@ -1,13 +1,9 @@
 package za.ac.cput.Panashe;
-//Panashe Muinzani_218186568
-// 14 May 2021
-//Java Collection classes
-
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ListCollection {
+public class ListDemo {
     public static void main(String[] args) {
 
         List<String> myToDoList = new ArrayList<String>();
@@ -17,7 +13,7 @@ public class ListCollection {
         myToDoList.add("Research Birthday Venues");
         myToDoList.remove(0);
         for (String eachItemInList: myToDoList)
-        System.out.println(eachItemInList);
+            System.out.println(eachItemInList);
         boolean output = myToDoList.contains("Do ADP3");
         if (output)
             System.out.println("The list contains element, Do ADP3");
@@ -25,4 +21,4 @@ public class ListCollection {
             System.out.println("The list does not contain element, Do ADP3");
 
     }
-    }
+}
