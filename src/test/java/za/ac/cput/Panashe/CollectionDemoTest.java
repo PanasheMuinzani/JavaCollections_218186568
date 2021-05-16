@@ -36,10 +36,11 @@ class CollectionDemoTest {
         Collection<String> collection = new LinkedList<>();
         collection.add("Hip-Hop");
         collection.add("Gospel");
+        assertEquals(2, collection.size());
         if(collection.contains("Gospel")){
             System.out.println("Contains Gospel");
         }
-        assertEquals(2, collection.size());
+
     }
 }
 
